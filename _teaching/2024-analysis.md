@@ -4,6 +4,6 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2024-analysis
 venue: "Ecole Polytechnique"
-date: 2024
+date: "2024 fall"
 location: "Palaiseau, France"
 ---
