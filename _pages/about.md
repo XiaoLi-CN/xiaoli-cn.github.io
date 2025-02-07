@@ -8,7 +8,7 @@ redirect_from:
 ---
 I am a PhD student in the Laurent Schwartz center for Mathematics, École Polytechnique. I am interested in everything that is related to dynamics and intersection theory.
 
-
+<img src="/images/photos/2alpes.jpeg" alt="Description of image" width="500" height="600">
 
 Contact information
 ======
