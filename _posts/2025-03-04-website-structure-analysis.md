@@ -1,7 +1,7 @@
 ---
 title: '网站结构分析'
-date: 2024-01-15
-permalink: /posts/2024/01/website-structure
+date: 2025-03-04
+permalink: /posts/website-structure
 categories:
   - 技术文档
 tags:
