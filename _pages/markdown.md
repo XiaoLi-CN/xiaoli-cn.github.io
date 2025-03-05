@@ -1,13 +1,13 @@
 ---
 layout: archive
-permalink: /markdown/
+permalink: /posts/
 title: "Posts"
 author_profile: true
 redirect_from: 
   - /md/
   - /markdown.html
 ---
-
+<!-- 
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
@@ -17,4 +17,18 @@ redirect_from:
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
   {% include archive-single.html %}
-{% endfor %}
+{% endfor %} -->
+
+
+<div class="archive">
+  {% raw %}{% include base_path %}{% endraw %}
+  {% raw %}{% capture written_year %}'None'{% endcapture %}{% endraw %}
+  {% raw %}{% for post in site.posts %}{% endraw %}
+    {% raw %}{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}{% endraw %}
+    {% raw %}{% if year != written_year %}{% endraw %}
+      <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+      {% raw %}{% capture written_year %}{{ year }}{% endcapture %}{% endraw %}
+    {% raw %}{% endif %}{% endraw %}
+    {% raw %}{% include archive-single.html %}{% endraw %}
+  {% raw %}{% endfor %}{% endraw %}
+</div>

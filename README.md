@@ -1,74 +1,77 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# LI Xiao 个人学术主页
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+这是一个基于 Academic Pages 主题的个人学术网站。网站使用 Jekyll 构建，托管在 GitHub Pages 上。
 
-# Getting Started
+## 网站信息
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+- 网站名称：LI Xiao Webpage
+- 网站地址：https://xiaoli-cn.github.io
+- 主题：Academic Pages (基于 Minimal Mistakes Jekyll 主题)
+- 版本：0.8.1.1
 
-See more info at https://academicpages.github.io/
+## 功能特点
 
-## Running locally
+- 响应式设计，支持移动端访问
+- 支持学术内容展示（论文、讲座、教学等）
+- 支持 Markdown 写作
+- 支持评论系统（可选）
+- 支持多种社交媒体链接
+- 支持 RSS 订阅
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+## 本地开发
 
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+### 环境要求
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+- Ruby 和 Bundler
+- Node.js
+- Jekyll
 
-## Using Docker
+### macOS 安装步骤
 
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
+```bash
+# 安装依赖
+brew install ruby
+brew install node
+gem install bundler
 
-You can build and execute the container by running the following command in the repository:
+# 安装项目依赖
+bundle install
+npm install
+
+# 本地运行
+jekyll serve -l -H localhost
+```
+
+网站将在 `http://localhost:4000` 运行。
+
+## Docker 部署
+
+如果您不想安装本地依赖，可以使用 Docker 运行网站：
 
 ```bash
 docker compose up
 ```
 
-You should now be able to access the website from `localhost:4000`.
+同样可以通过 `http://localhost:4000` 访问网站。
 
-# Maintenance
+## 目录结构
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+- `_config.yml`: 网站配置文件
+- `_pages/`: 网站页面
+- `_posts/`: 博客文章
+- `_publications/`: 发表的论文
+- `_talks/`: 学术报告
+- `_teaching/`: 教学材料
+- `assets/`: 网站资源文件
+- `files/`: 可下载文件
+- `images/`: 图片资源
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+## 许可证
 
-## Bugfixes and enhancements
+本项目基于 MIT 许可证开源。
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+## 致谢
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
-
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
-
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+- 基于 [Academic Pages](https://github.com/academicpages/academicpages.github.io) 主题开发
+- 原主题由 [Stuart Geiger](https://github.com/staeiou) 开发
+- 基于 [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) 修改
