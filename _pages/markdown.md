@@ -1,4 +1,5 @@
 ---
+layout: archive
 permalink: /markdown/
 title: "Posts"
 author_profile: true
